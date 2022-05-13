@@ -62,6 +62,3 @@ module load cellranger/6.0 # there is only version 3 under conda
 
 # step4: running Seurat on individual samples
 bsub -q big -e seurat_individual.log Rscript seurat_individual.R $pwd $indir $outdir $scrubletdir $samples $projectName $marker_link $marker_sheet $flag $mtPattern $rbPattern $mitoCutoff
-
-# step5: running Seurat on multiple samples
-bsub -q big -e seurat_multi.log Rscript seurat_multi.R $pwd $indir $outdir $scrubletdir $samples $projectName $marker_link $marker_sheet $flag $mtPattern $rbPattern $mitoCutoff $treatments
